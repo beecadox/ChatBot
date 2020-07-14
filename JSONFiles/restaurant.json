@@ -1,0 +1,90 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day"],
+         "responses": ["Hello, and welcome to Kabooli Restaurant", "Good to see you. I am Kabooli. How can I help you?", "Welcome to Kabooli world! How can I help?"],
+         "context": [""]
+        },
+        {"tag": "goodbye",
+         "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
+         "responses": ["Enjoy your food!", "Have a Kabooli-sh day", "Bye! Come back again soon.", "Bon Appetite"],
+         "context": [""]
+        },
+        {"tag": "thanks",
+         "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+         "responses": ["Happy to help!", "Any time!", "My pleasure"],
+         "context": [""]
+        },
+        {"tag": "noanswer",
+         "patterns": [""],
+         "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
+         "context": [""]
+        },
+        {"tag": "menu",
+         "patterns": ["food", "menu", "offer", "helpful", "consume"],
+         "responses": ["This is our main menu.\n\tSalads\n\tLunch Time\n\tSweet niceties\n\tSmoothies\n\tBreakfast\n", "You can choose something from our menu : \n\tSalads\n\tLunch Time\n\tSweet niceties\n\tSmoothies\n\tBreakfast\n",
+                       "Choose one category from our menu\n\tSalads\n\tLunch Time\n\tSweet niceties\n\tSmoothies\n\tBreakfast\n"],
+         "context": [""]
+        },
+        {"tag": "ask_if_wants_something_more",
+         "patterns": ["bread", "sauce","chick", "avol", "taco", "toast", "eggu", "scram", "caku", "cupcake", "cm", "green", "red", "purple"],
+         "responses": ["Would you like something more?"],
+         "context": [""]
+        },
+        {"tag": "salads",
+         "patterns": ["salad", "salads", "healthy", "tomato", "avocado", "nutrition", "light", "vegetables" ],
+         "responses": ["We have a healthy person here!\nSALAD MENU\n\tKabooli Salad - 4$ (press kabsad)\n\tAvocado Time - 3$ (press avot)\n\tTortilla Cado - 5$ (press torc)\n. Provide number of items. ex. avot 5 torc 1",
+                       "I could give you a simple avocado if you want!\nSALAD MENU\n\tKabooli Salad - 4$ (press kabsad)\n\tAvocado Time - 3$ (press avot)\n\tTortilla Cado - 5$ (press torc)\nProvide number of items. ex. avot five torc 15"],
+         "context": ["some_bread"]
+        },
+        {"tag": "some_bread",
+         "patterns": ["avot", "kabsad", "torc"],
+         "responses": ["Would you like some bread(press bread) or sauce(press sauce)?Provide number of items. ex. bread 2. Press menu if you want to continue without bread or sauce or no if you wanna proceed to paycheck"],
+         "context": ["ask_if_wants_something_more"]
+        },
+        {"tag": "lunch",
+         "patterns": ["lunch", "afternoon", "noon"],
+         "responses": ["Great choice. We have a great variety of Lunch Menus.\nLUNCH MENU\n\tKabooli Chicken Lover- 7$ (press chick)\n\tAvoluncho - 8$ (press avol)\n\tCado Cado Taco- 5$ (press taco)\nProvide number of items. ex. avol 1"],
+         "context": ["ask_if_wants_something_more"]
+        },
+        {"tag": "breakfast",
+         "patterns": ["breakfast", "morning", "filling"],
+         "responses": ["Best way to start your morning\nBREAKFAST MENU\n\tAvocado Toast- 3$(press toast)\n\tAvoeggu - 4$ (press eggu)\n\tCado Cado Scrambled Eggs- 5$ (press scram)\nProvide number of items. ex. eggu three"],
+         "context": ["ask_if_wants_something_more"]
+        },
+        {"tag": "sweets",
+         "patterns": ["sugar", "dessert", "sweets", "niceties"],
+         "responses": ["Best choices for people with sweet tooth.\nNICETIES\n\tAvocado Cake- 4$(press caku)\n\tCadocakes - 2$ (press cupcake)\n\tCado mousse- 5$ (press cm)\nProvide number of items. ex. caku 1"],
+         "context": ["ask_if_wants_something_more"]
+        },
+        {"tag": "smoothies",
+         "patterns": ["drink", "fruit", "smoothie", "berry", "vegetables"],
+         "responses": ["Because we need some color in our life\nSMOOTHIES\n\tGreen Smoothie- 4$(press green)\n\tRed Smoothie - 4$ (press red)\n\tPurple Smoothie - 4$ (press purple)\nProvide number of items. ex. red two"],
+         "context": ["ask_if_wants_something_more"]
+        },
+        {"tag": "answer_yes",
+         "patterns": ["Yes, please", "Yeah", "Of course", "Ahaa"],
+         "responses": ["MENU\n\tSalads\n\tLunch Time\n\tSweet niceties\n\tSmoothies\n\tBreakfast\n"],
+         "context": ["menu"]
+        },
+        {"tag": "answer-no",
+         "patterns": ["Nope", "No thank you", "Not really", "Thank you but no", "No I am okay"],
+         "responses": ["Please give me your full name ex. name Julia Roberts"],
+         "context": ["confirm_name"]
+        },
+        {"tag": "confirm_name",
+         "patterns": ["name", "fullname"],
+         "responses": ["Please provide telephone number ex. tel 6965125378"],
+         "context": ["confirm_telephone_number"]
+        },
+        {"tag": "confirm_telephone_number",
+         "patterns": ["tel", "69", "210"],
+         "responses": ["Please provide your address and floor ex. adr Lazaraki 34 TK42342 Athens floor 4"],
+         "context": [""]
+        },
+        {"tag": "confirm_address",
+         "patterns": ["adr", "floor", "address", "TK", "0123456789"],
+         "responses": ["Thank you for choosing Kabooli World. Estimated delivery time 30 minutes"],
+         "context": ["bye"]
+        }
+   ]
+}
