@@ -5,7 +5,7 @@ import numpy as np
 
 
 def train_model(train_x, train_y):
-    model_name = 'Model/chatbot_model_en.h5'
+    model_name = 'Model/chatbot_model.h5'
     epochs = 400
     batch_size = 40
     # Sequential model consists of 3 layers. First layer 128 neurons, second layer 64 neurons and 3rd output layer
