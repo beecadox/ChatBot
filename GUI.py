@@ -2,6 +2,12 @@ from tkinter import *
 from chat import chatbot_response
 from check_functions import check_if_name, check_if_food_item
 
+price = 0
+name_flag = 0
+name = ""
+addr = ""
+tel = ""
+
 
 def send():
     msg = EntryBox.get("1.0", 'end-1c').strip()
