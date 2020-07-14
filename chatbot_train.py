@@ -57,8 +57,8 @@ def organize_from_json():
 
 ignore_words = ['?', '!', ',']
 data_file = open('JSONFiles/restaurant.json').read()
-word_pickle = 'PickleFiles/words_en.pkl'
-class_pickle = 'PickleFiles/classes_en.pkl'
+word_pickle = 'PickleFiles/words.pkl'
+class_pickle = 'PickleFiles/classes.pkl'
 
 intents = json.loads(data_file)
 words, classes, documents = organize_from_json()
